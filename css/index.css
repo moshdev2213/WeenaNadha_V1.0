@@ -1,0 +1,192 @@
+/*
+  ---------------------------------------------------------------------
+  --------THIS STYLE SHEET IS RELATED TO THE MAINNDEX FILE-------------
+  ---------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family: spartan;
+  src: url("../fonts/spartan/static/Spartan-Bold.ttf");
+}
+
+:root {
+  --grey1: #212529;
+  --grey2: #343a40;
+  --grey3: #495057;
+  --grey4: #6c757d;
+  --grey5: #adb5bd;
+  --grey6: #ced4da;
+  --grey7: #dee2e6;
+  --grey8: #e9ecef;
+  --grey9: #f8f9fa;
+  --grey10: #f8f9fa;
+  --red: #ff2019;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.prinav {
+  padding: 1%;
+  background-color: #212529;
+  height: 4vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.prinav .left,
+.prinav .right {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  /* justify-content: center; */
+}
+
+.prinav .right {
+  margin-right: 2%;
+  justify-content: flex-end;
+}
+
+.prinav .left a,
+.prinav .right a {
+  margin-left: 2%;
+  text-decoration: none;
+  font-family: spartan;
+  font-size: 10.5px;
+  color: #ffffff;
+}
+
+.secnav {
+  background-color: var(--grey5);
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.secnav img {
+  width: 150px;
+  flex: 1;
+}
+
+.secnav .details {
+  font-family: spartan;
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+
+.secnav .details a {
+  text-decoration: none;
+  color: var(--grey1);
+  font-size: 15px;
+}
+
+.searchbox {
+  border-radius: 5px;
+  border: white;
+  background-color: var(--grey7);
+  width: 190px;
+  height: 20px;
+}
+
+::placeholder {
+  color: var(--grey4);
+  padding: 2%;
+  font-family: spartan;
+}
+
+.main {
+  background-color: white;
+  height: 91vh;
+}
+
+.filters {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  background-color: white;
+  border: none;
+  padding: 2%;
+  /* box-shadow: 10px 10px 5px #aaaaaa; */
+}
+
+.products {
+  float: right;
+  background-color: var(--grey8);
+  width: 80%;
+}
+
+.products_list {
+  position: relative;
+  height: auto;
+  border-left: #212529 solid 1px;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer {
+  float: right;
+  background-color: #212529;
+  /* height: 100px; */
+  bottom: 0;
+  width: 80%;
+  color: white;
+  overflow: hidden;
+  padding: 2%;
+}
+
+footer h1 {
+  text-align: center;
+  margin: auto;
+}
+
+/* .products_list {
+
+} */
+@media (min-width: 992px) {
+  .menu__btn{
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .filters {
+    display: none;
+  }
+
+  .products {
+    width: 100%;
+    border: none;
+  }
+  footer {
+    width: 100%;
+  }
+  .prinav,
+  .secnav_item {
+    display: none;
+  }
+  .secnav {
+    height: 12vh;
+  }
+}
+
+/* .clicked {
+  -webkit-transition: 1s;
+} */

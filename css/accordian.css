@@ -1,0 +1,62 @@
+/*
+  ---------------------------------------------------------------------
+  --------THIS STYLE SHEET IS RELATED TO THE ACCORDIAN BAR-------------
+  ---------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family: spartan;
+  src: url("../fonts/spartan/static/Spartan-Bold.ttf");
+  font-family: spartan_reg;
+  src: url("../fonts/spartan/static/Spartan-Regular.ttf");
+  font-family: spartan_semi;
+  src: url("../fonts/spartan/static/Spartan-SemiBold.ttf");
+}
+
+:root {
+  --grey1: #212529;
+  --grey2: #343a40;
+  --grey3: #495057;
+  --grey4: #6c757d;
+  --grey5: #adb5bd;
+  --grey6: #ced4da;
+  --grey7: #dee2e6;
+  --grey8: #e9ecef;
+  --grey9: #f8f9fa;
+  --grey10: #f8f9fa;
+  --red: #ff2019;
+}
+.accordion {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--grey6) ;
+  text-align: left;
+  outline: none;
+  font-family: spartan_semi;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--red);
+  color: var(--grey10);
+  font-family: spartan;
+}
+
+.panel {
+  padding: 0 30px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 100%;
+  color:var(--grey4)
+}
+i{
+  float: right;
+}
