@@ -10,13 +10,13 @@
     <!-- <link rel="stylesheet" href="footer.css"> -->
     <link rel="stylesheet" href="css/accordian.css" />
     <link rel="stylesheet" href="css/hamburger.css" />
+    <link rel="stylesheet" href="css/ratings.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!--FONT AWESOME STYLES FILE-->
     <title>PRODUCT_PROFILE</title>
-    <script src="script.js" type="text/javascript"></script>
     <!--THE MAIN JS FILE-->
   </head>
 
@@ -83,7 +83,7 @@
           PRICE<i class="fa-solid fa-sort-down"></i>
         </button>
         <div class="panel price_ranger">
-          <br>
+          
           <input id="pricemin"  type="number" min="0" placeholder="Min">
           <span>-</span>
           <input id="pricemax"  type="number" min="0" placeholder="Max">
@@ -92,39 +92,44 @@
         </div>
 
         <button class="accordion">
-          Section 2<i class="fa-solid fa-sort-down"></i>
+          SHIPPING<i class="fa-solid fa-sort-down"></i>
         </button>
         <div class="panel">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <label for="">FREE SHIPPING</label>
+          <input id="" class="check" type="checkbox">
+          <label for="">PAID</label>
+          <input id="" class="check" type="checkbox">
         </div>
 
         <button class="accordion">
-          Section 3<i class="fa-solid fa-sort-down"></i>
+          RATINGS<i class="fa-solid fa-sort-down"></i>
         </button>
-        <div class="panel">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+        <div id="div" class="panel" >
+          <!--THE STAR RATINGS CATEGOEY STARTS HERE-->
+          <fieldset class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            
+            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+            
+            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+            
+            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+            
+            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+            
+        </fieldset>
         </div>
 
         <button class="accordion">
-          Section 4<i class="fa-solid fa-sort-down"></i>
+          WARRANTY<i class="fa-solid fa-sort-down"></i>
         </button>
         <div class="panel">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <label for="">3 MONTHS</label>
+          <input id="" class="check warranty" type="checkbox"><br>
+          <label for="">6 MONTHS</label>
+          <input id="" class="check warranty" type="checkbox"><br>
+          <label for="">1 YEAR</label>
+          <input id="" class="check warranty" type="checkbox"><br>
         </div>
         <script src="script.js"></script>
       </div>
@@ -266,6 +271,8 @@
     </div>
 
     <script src="js/accordian.js"></script>
+    <script src="js/value.js" type="text/javascript"></script>
+
   </body>
 </html>
 

@@ -46,8 +46,8 @@
   background-color: var(--red);
   color: var(--grey10);
   font-family: spartan;
+  
 }
-
 .panel {
   padding: 0 30px;
   background-color: white;
@@ -56,7 +56,9 @@
   transition: max-height 0.2s ease-out;
   width: 100%;
   color:var(--grey4);
+  margin-top: 5%;
   margin-bottom: 2%;
+  z-index: 999;
 
 }
 .price_ranger input{
@@ -77,10 +79,16 @@
 .price_ranger .playbtn:active{
   transform: scale(0.9);
 }
+.check{
+  float: left;
+  margin-right: 3%;
+  
+}
 .fa-play{
   color: var(--grey10);
 }
 i{
   float: right;
 }
+
 
