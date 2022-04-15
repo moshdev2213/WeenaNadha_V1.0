@@ -103,6 +103,7 @@ body {
   background-color: var(--grey7);
   width: 190px;
   height: 20px;
+  outline: none;
 }
 
 ::placeholder {
@@ -110,7 +111,9 @@ body {
   padding: 2%;
   font-family: spartan;
 }
-
+.fa-solid .fa-magnifying-glass{
+  
+}
 .main {
   background-color: white;
   height: 91vh;
@@ -136,10 +139,25 @@ body {
   position: relative;
   height: auto;
   border-left: #212529 solid 1px;
-  padding: 2%;
+  /* padding: 2%; */
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
+  
+}
+/* search image inserter*/
+#input-container {
+  position: relative;
+}
+
+#input-container > i {
+  position: absolute;
+  top: 3px;
+  left: 15px;
+}
+
+#input-container > input {
+  padding-left: 40px;
 }
 
 footer {
@@ -186,7 +204,14 @@ footer h1 {
   }
   .secnav {
     height: 12vh;
+    position: sticky;
+    /* top:0%; */
+    z-index: 9;
   }
+  #input-container {
+    display: none;
+  }
+
 }
 
 /* .clicked {
