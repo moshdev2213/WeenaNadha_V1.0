@@ -1,0 +1,31 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+header {
+  min-height: 50px;
+  background: lightcyan;
+}
+footer {
+  background: PapayaWhip;
+}
+
+/* Trick: */
+body {
+  position: relative;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+
+footer {
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 50px !important;
+  background-color: black !important;
+}

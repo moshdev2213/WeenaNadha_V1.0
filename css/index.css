@@ -143,6 +143,8 @@ body {
 }
 
 footer {
+  position: sticky;
+  top: 100%;
   float: right;
   background-color: #212529;
   /* height: 100px; */
