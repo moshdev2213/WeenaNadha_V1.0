@@ -45,6 +45,7 @@ img{
 
     }
 }
+
 .img-item:nth-child(1),
 .img-item:nth-child(2),
 .img-item:nth-child(3){
@@ -153,9 +154,9 @@ img{
 .purchase-info input,
 .purchase-info .btn{
     border: none;
-    border-radius: 25px;
+    border-radius: 3px;
     text-align: center;
-    padding: 0.45rem 0.8rem;
+    padding: 0.8rem 1rem;
     outline: 0;
     margin-right: 0.2rem;
     margin-bottom: 1rem;
@@ -163,6 +164,8 @@ img{
 }
 .purchase-info input{
     border: 1px solid black;
+    padding: 0.5rem .5rem;
+
 }
 .purchase-info input{
     width: 60px;
@@ -203,5 +206,94 @@ img{
     }
     .product-content{
         padding-top: 0;
+    }
+}
+.othersecs{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-content: flex-start;
+    margin-left: 10%;
+    gap: 1px;
+    
+}
+.h2 h2{
+    text-transform: capitalize;
+    text-align: center;
+}
+.reviews{
+    box-sizing: border-box;
+    width: 90%;
+    height: 50%;
+    padding: 2%;
+    /* border: #000 solid 1px; */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.reviews p{
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2% ;
+
+}
+.reviews:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.photo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo img{
+    width: 200px;
+    border-radius: 100px;
+
+}
+/* .per3{
+    border-radius: 100px;
+
+} */
+.texty{
+    flex: 4;
+}
+@media (max-width: 992px){
+    .texty p{
+        padding: 2% 2% 2% 10%;
+    }
+}
+@media (max-width: 576px){
+    .othersecs h2::after{
+        display: none;
+    }
+    .othersecs{
+        flex-direction: column;
+        align-content: center;
+        margin-left: 2%;
+
+    }
+    .reviews{
+        width: 80%;
+        height: 20%;
+        flex-direction: column;
+
+    }
+    .reviews:hover{
+    transform: scale(1.01);
+        
+    }
+    .texty p{
+        padding: 10% 2% 2% 2%;
     }
 }
