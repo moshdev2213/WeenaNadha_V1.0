@@ -159,7 +159,23 @@ a {
 .product-links {
   text-align: right;
 }
+.btnbuy{
+  border-radius: 5px;
+  border: none;
+  padding: 4%;
+  color: white;
+  background-color: red;
+  position: relative;
+  top: -3px;
+  left: -3px;
+  font-family: spartan_semi;
+  /* font-weight: 400; */
+}
+.btnbuy:active{
+  transform: scale(0.9);
+  transition: 0.2s;
 
+}
 .product-links a {
   display: inline-block;
   margin-left: 5px;
@@ -181,5 +197,13 @@ a {
         transform: scale(1);
 
     }
+    .btnbuy{
+      left: -7px;
+      top: -5px;
+      padding: 3%;
+      font-size: 12px;
+      
+    }
+
 }
 

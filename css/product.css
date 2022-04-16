@@ -1,0 +1,33 @@
+:root {
+    --grey1: #212529;
+    --grey2: #343a40;
+    --grey3: #495057;
+    --grey4: #6c757d;
+    --grey5: #adb5bd;
+    --grey6: #ced4da;
+    --grey7: #dee2e6;
+    --grey8: #e9ecef;
+    --grey9: #f8f9fa;
+    --grey10: #f8f9fa;
+    --red: #ff2019;
+  }
+  
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.main .ppleft{
+    flex: 4;
+    background-color: white;
+    height: 91vh;
+}
+.main .ppright{
+    flex: 3;
+    background-color: var(--grey8);
+}
+@media (max-width: 991px){
+    .main{
+        flex-direction: column;
+    }
+}
