@@ -1,0 +1,164 @@
+@font-face {
+  font-family: spartan;
+  src: url("../fonts/spartan/static/Spartan-ExtraBold.ttf");
+}
+@font-face {
+  font-family: spartan_medium;
+  src: url("../fonts/spartan/static/Spartan-Medium.ttf");
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.main .leftcontain {
+  flex: 1;
+  height: 100vh;
+  background-image: url(../IMG/giut.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.leftcontain p{
+  visibility: hidden;
+}
+.main .rightcontain {
+  flex: 1;
+  background-color: white;
+}
+.rightcontain h2 {
+  font-family: spartan;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 2%;
+  margin-left: 10%;
+  margin-bottom: 15%;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-bottom: 5px solid #b1b1b1;
+  width: 60%;
+  padding: 1%;
+  margin-left: 15%;
+  display: block;
+  font-size: 20px;
+  font-family: spartan_medium;
+}
+::placeholder {
+  font-size: 20px;
+  font-family: spartan;
+  color: #b1b1b1;
+}
+.eye {
+  width: 23px;
+  position: relative;
+  top: -32px;
+  left: 73%;
+}
+.eye:active {
+  transform: scale(0.9);
+}
+button {
+  display: block;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 3%;
+  font-family: spartan;
+  border-radius: 5px;
+  font-size: medium;
+  transition: 0.5s;
+  word-spacing: 5px;
+}
+button:active {
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+.log,
+.glog,
+.fblog {
+  margin-left: 41%;
+}
+.log {
+  margin-top: 10%;
+}
+.glog {
+  margin-left: 30%;
+}
+.fblog {
+  margin-left: 28.5%;
+}
+@media (max-width:992px) {
+  .main {
+    flex-direction: column;
+  }
+  .log,
+  .glog,
+  .fblog {
+    margin-left: 45%;
+  }
+  .log {
+    margin-top: 10%;
+  }
+  .glog {
+    margin-left: 35%;
+  }
+  .fblog {
+    margin-left: 34%;
+  }
+  input{
+    border-bottom: 5px solid #b1b1b1;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .eye{
+    left: 89%;
+  }
+  .leftcontain p::after{
+    content: "";
+    width: 100px;
+  }
+  .main .leftcontain{
+    filter: blur(5px);
+
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    flex-direction: column;
+  }
+  .log,
+  .glog,
+  .fblog {
+    margin-left: 40%;
+  }
+  .log {
+    margin-top: 10%;
+  }
+  .glog {
+    margin-left: 16%;
+  }
+  .fblog {
+    margin-left: 13%;
+  }
+  input{
+    border-bottom: 5px solid #b1b1b1;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .eye{
+    left: 85%;
+  }
+  .main .rightcontain{
+    border-top-left-radius: 25px;
+  }
+  .leftcontain p{
+    visibility: hidden;
+  }
+}
+
