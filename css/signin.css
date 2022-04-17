@@ -42,15 +42,15 @@ input {
   outline: none;
   border: none;
   border-bottom: 5px solid #b1b1b1;
-  width: 60%;
+  width: 80%;
   padding: 1%;
-  margin-left: 15%;
+  margin-left: 10%;
   display: block;
   font-size: 20px;
   font-family: spartan_medium;
 }
 ::placeholder {
-  font-size: 20px;
+  font-size: 18px;
   font-family: spartan;
   color: #b1b1b1;
 }
@@ -58,7 +58,7 @@ input {
   width: 23px;
   position: relative;
   top: -32px;
-  left: 73%;
+  left: 88%;
 }
 .eye:active {
   transform: scale(0.9);
@@ -92,6 +92,38 @@ button:active {
 }
 .fblog {
   margin-left: 28.5%;
+}
+.check{
+  position: relative;
+  left: -30%;
+  display: inline;
+}
+.create{
+  text-transform: uppercase;
+  font-size: small;
+}
+.tacbox{
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+}
+.tacbox a{
+  text-decoration: none;
+  font-family: spartan_medium;
+  color: black;
+  cursor: pointer;
+  flex: 1;
+}
+.chkb{
+  position: relative;
+  left: -30%;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.checkyy{
+
 }
 @media (max-width:992px) {
   .main {
@@ -146,6 +178,10 @@ button:active {
   .fblog {
     margin-left: 13%;
   }
+  .create{
+    margin-left: 28%;
+
+  }
   input{
     border-bottom: 5px solid #b1b1b1;
     width: 80%;
@@ -159,6 +195,16 @@ button:active {
   }
   .leftcontain p{
     visibility: hidden;
+  }
+  .rightcontain h2{
+    font-size: 20px;
+    text-align: center;
+
+  } 
+  ::placeholder {
+    font-size: 15px;
+    
+    
   }
 }
 
