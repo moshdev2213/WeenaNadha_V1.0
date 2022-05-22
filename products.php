@@ -173,10 +173,12 @@
           <div class="product-card">
             <div class="badge"><?php echo $product['deal']?></div>
             <div class="product-tumb">
-              <img src="<?php echo $img?>" alt="" srcset="" />
+              <!--this href makes the thumbnail direct to the relevant product-->
+              <a href="product.php?id=<?php echo $product['product_ID']?>""><img src="<?php echo $img?>" alt="" srcset="" /></a> 
             </div>
             <div class="product-details">
               <span class="product-catagory"><?php echo $category ?></span>
+              <!--this href makes title text to re-direct to the relevant product-->
               <h4><a href="product.php?id=<?php echo $product['product_ID']?>"><?php echo $product['name'] ?></a></h4>
               <p>
                 <?php echo $product['description'] ?>
