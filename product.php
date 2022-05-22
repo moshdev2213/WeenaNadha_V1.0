@@ -83,6 +83,13 @@
         $stock = "Out of Stock";
       }
 
+      // getting the images of the product
+      $images = database::search("SELECT * FROM `image` WHERE `product_id`='$pid' ");
+      $img_array = array();
+      while ($image = $images->fetch_assoc()) {
+        array_push($img_array, $image['path']);
+      }
+
       //getting reviews
       $reviews = database::search("SELECT * FROM `review` WHERE `product_ID`='$pid' ");
       $rn = $reviews->num_rows;
@@ -104,33 +111,24 @@
           <div class="product-imgs">
             <div class="img-display">
               <div class="img-showcase">
-                <img src="IMG/iimg/1.jpg" alt="shoe image">
-                <img src="IMG/iimg/3.jpg" alt="shoe image">
-                <img src="IMG/iimg/4.jpg" alt="shoe image">
-                <img src="IMG/iimg/5.jpg" alt="shoe image">
+                <?php
+                foreach ($img_array as $img) {
+                  echo "<img src='$img' alt='product' />";
+                }
+                ?>
               </div>
             </div>
             <div class="img-select">
-              <div class="img-item">
-                <a href="#" data-id="1">
-                  <img src="IMG/iimg/1.jpg" alt="shoe image">
-                </a>
-              </div>
-              <div class="img-item">
-                <a href="#" data-id="2">
-                  <img src="IMG/iimg/3.jpg" alt="shoe image">
-                </a>
-              </div>
-              <div class="img-item">
-                <a href="#" data-id="3">
-                  <img src="IMG/iimg/4.jpg" alt="shoe image">
-                </a>
-              </div>
-              <div class="img-item">
-                <a href="#" data-id="4">
-                  <img src="IMG/iimg/5.jpg" alt="shoe image">
-                </a>
-              </div>
+              <?php
+              $id = 1;
+              foreach ($img_array as $img) {
+              ?>
+                <div class="img-item">
+                  <a href="#" data-id="<?php echo $id++ ?>">
+                    <img src="<?php echo $img ?>" alt="product" />
+                  </a>
+                </div>
+              <?php } ?>
             </div>
           </div>
           <!-- card right -->
@@ -155,10 +153,10 @@
               <p><?php echo $product["description"] ?></p>
               <ul>
                 <li><img src="IMG/chhh.png" alt=""> Color: <?php echo $product["color"] ?></li>
-                <li><img src="IMG/chhh.png" alt="">Available:in <?php echo $stock ?></li>
+                <li><img src="IMG/chhh.png" alt="">Available:<?php echo $product["stock"] ?></li>
                 <li><img src="IMG/chhh.png" alt="">Category: <?php echo $category["name"] ?></li>
-                <li><img src="IMG/chhh.png" alt="">Shipping Area: </li>
-                <li><img src="IMG/chhh.png" alt="">Shipping Fee: </li>
+                <li><img src="IMG/chhh.png" alt="">Design:<?php echo $product["design"] ?> </li>
+                <li><img src="IMG/chhh.png" alt="">Weight:<?php echo $product["weight"] ?> </li>
               </ul>
             </div>
 
@@ -192,9 +190,10 @@
         ?>
             <div class="reviews">
               <div class="photo">
-                <img class="per1" src="IMG/7per.jpg" alt="">
+                <img class="per1" src="<?php echo $user['image']?>" alt="">
               </div>
               <div class="texty">
+                <!--the shows the names and emails-->
                 <h3><?php echo $user['username'] ?> at <?php echo $review['date'] ?>
                   <span class="product-rating" style="margin-left: 2%;">
                     <?php

@@ -164,13 +164,16 @@
           $products = database::search("SELECT * FROM `product` ");
           
           while ($product=$products->fetch_assoc()) {
+            //this fetches the image from the database with compraing to the product id   
+            $img = database::search("SELECT * FROM `image` WHERE `product_id` = '{$product['product_ID']}' ")->fetch_assoc()['path'];
+            //this fetch the category specification from the database and query enables here
             $category = database::search("SELECT * FROM `category` WHERE `category_ID` = '".$product['category_ID']."' ");
             $category = $category->fetch_assoc()['name'];
             ?>
           <div class="product-card">
-            <div class="badge">Hot</div>
+            <div class="badge"><?php echo $product['deal']?></div>
             <div class="product-tumb">
-              <img src="IMG/1.jpg" alt="" srcset="" />
+              <img src="<?php echo $img?>" alt="" srcset="" />
             </div>
             <div class="product-details">
               <span class="product-catagory"><?php echo $category ?></span>
@@ -179,7 +182,7 @@
                 <?php echo $product['description'] ?>
               </p>
               <div class="product-bottom-details">
-                <div class="product-price"><small>$96.00</small>Rs<?php echo $product['price']?></div>
+                <div class="product-price"><small>Rs<?php echo $product['mrp']?></small>Rs<?php echo $product['price']?></div>
                 <div class="product-links">
                   <button class="btnbuy">BUY NOW</button>
                   <a href=""><i class="fa fa-heart"></i></a>
