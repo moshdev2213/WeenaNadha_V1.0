@@ -7,6 +7,8 @@
 img{
     width: 100%;
     display: block;
+    overflow: hidden;
+    
 }
 .img-display{
     overflow: hidden;
@@ -16,10 +18,15 @@ img{
 .img-showcase{
     display: flex;
     width: 100%;
+    height: 450px;
+
     transition: all 0.5s ease;
+    object-fit: contain;
 }
 .img-showcase img{
     min-width: 100%;
+    width: 10px;
+    object-fit: contain;
 }
 .img-select{
     display: flex;
@@ -37,7 +44,7 @@ img{
 }
 .img-item a img{
     height: 130px;
-    
+
 }
 @media screen and (max-width:576px) {
     .img-item a img{
