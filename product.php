@@ -162,10 +162,13 @@
 
             <div class="purchase-info">
               <input type="number" min="0" value="1">
-              <button type="button" class="btn">
-                Add to Cart <i class="fas fa-shopping-cart"></i>
-              </button>
-              <button type="button" class="btn">Buy Now</button>
+              <a href="My Shopping Cart.html">
+                <button type="button" class="btn">
+                  Add to Cart <i class="fas fa-shopping-cart"></i>
+                </button>
+              </a>
+
+              <a href="Cart.html"><button type="button" class="btn">Buy Now</button></a>
             </div>
           </div>
         </div>
