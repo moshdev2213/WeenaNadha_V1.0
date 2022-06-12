@@ -127,6 +127,7 @@
 
       <div class="box-container">
         <div class="box">
+          <!-- the below links the product page images and then it links the database -->
           <a href="product.php?id=20"><img src="IMG/iimg/1.jpg" alt="Saxophone" /></a> 
           
           <h3>Clary C-90</h3>

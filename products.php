@@ -129,34 +129,45 @@
       <div id="p_list" class="products_list">
         <!--THE PRODUCT CARD CATEGORY STARTS HERE-->
         <?php
+        //in first the $query stores the all of the outputs from product table 
         $query = "SELECT * FROM product ";
+        //values assigned to pricemin in default
         $pricemin = 0;
+        //values assigned to pricemax  in default
         $pricemax = pow(10, 10);
+        //initially the $warranty_in variable stores the '0' value 
         $warranty_in = '0';
+        //initially the $shipping_in variable stores the '5' value 
         $shipping_in = '5';
 
+        //this checks abut the warranty period
         if (isset($_GET['3m'])) {
+          //initially the $warranty_in variable stores the '0' value and now thw variable changes to "0,'3m'" 
           $warranty_in .= ",'3m'";
         }
         if (isset($_GET['6m'])) {
+          //initially the $warranty_in variable stores the '0' value and now thw variable changes to "0,'6m'" 
           $warranty_in .= ",'6m'";
         }
         if (isset($_GET['1y'])) {
+          //initially the $warranty_in variable stores the '0' value and now the variable changes to "0,'1y'" 
           $warranty_in .= ",'1y'";
         }
 
         //Using free shipping to filter the products
         if (isset($_GET['freeshipping'])) {
+          //initially the $shipping_in variable stores the '5' value and now the variable changes to "'5','0'" 
           $shipping_in .= ",'0'";
         }
         if (isset($_GET['shipping'])) {
+          //initially the $shipping_in variable stores the '5' value and now the variable changes to "'5','1'" 
           $shipping_in .= ",'1'";
         }
-
+        //this condition executes if there is no shipping fieldss are choosen in the filter tab
         if (!isset($_GET['freeshipping']) && !isset($_GET['shipping'])) {
           $shipping_in .= ",'0','1'";
         }
-
+        //this condition executes if there is no warrnty fields are choosen in the filter tab
         if (!isset($_GET['3m']) && !isset($_GET['6m']) && !isset($_GET['1y'])) {
           $warranty_in .= ",'0','3m','6m','1y'";
         }
@@ -164,16 +175,24 @@
 
         //SETTING THE PRICE RANGE
         if (isset($_GET['pricemax'])) {
+          //this sets the value if pricemax is setted
           $pricemax = $_GET['pricemax'];
         }
 
         if (isset($_GET['pricemin'])) {
+          //this sets the value if pricemin is setted
           $pricemin = $_GET['pricemin'];
         }
 
         //Using average rating to filter the products
         if (isset($_GET['rating'])) {
-          $query = "SELECT product.*,r.avg_rating
+          // the below query executes if rating is set
+          /* selects all from the product table and selects the avg_ratng from the table r (r is allias of rating)
+            inside the innerjoin the sub-querie from 196-198 line is executed
+            in it the product_id as well as the average of the rating is calculated and shown in the newly made avg_rating 
+            column and is grouped by the product_id   
+          */
+          $query = "SELECT product.*,r.avg_rating 
             FROM product 
             INNER JOIN (
               SELECT product_ID, AVG(rating) avg_rating
@@ -183,21 +202,26 @@
             
             where r.avg_rating >={$_GET['rating']} and warranty IN ($warranty_in)";
         } else {
+          //from here onwarsd the $query variable concatinates the relevant query accordingly to warranty
           $query .= " where warranty IN ($warranty_in)";
         }
-
+          //from here onwarsd the $query variable concatinates the relevant query accordingly to shipping
         $query .= " and  shipping IN ($shipping_in) ";
 
+        //from here onwarsd the $query variable concatinates the relevant query accordingly to pricemin and max set values
         $query .= "and price BETWEEN $pricemin AND $pricemax ";
 
         if (isset($_GET['search'])) {
+          //from here onwarsd the $query variable concatinates the relevant search  query if it is set
           $query .= " AND name LIKE '%{$_GET['search']}%'";
         }
         // echo $query;
+        //now the relevant query is finalized and is passed to the search method
         $products = database::search($query);
+        //of above $product is as an object and in it the attribute num_rows is taken
         $product_count = $products->num_rows;
 
-
+        //loop iterates untill the end of the produtcs present in the db
         while ($product = $products->fetch_assoc()) {
           //this fetches the image from the database with compraing to the product id   
           $img = database::search("SELECT * FROM `image` WHERE `product_id` = '{$product['product_ID']}' ")->fetch_assoc()['path'];
@@ -231,7 +255,7 @@
           </div>
           <!--tHE CARD DIV ENDS HERE-->
         <?php }
-
+        //condition checks the number of rows are 0 or not if 0 displays no product
         if ($product_count == 0) {
         ?>
           <h1>No Product Found</h1>
@@ -339,10 +363,13 @@
 
 
     //set values using url
+    //in here the location,search,length are built in variables in JS
     if (location.search.length > 0) {
+      //in here location.href gives the releavnt link of the website
       let url_string = location.href;
-      url = new URL(url_string);
+      url = new URL(url_string);//this is a object of URL
       if (url.searchParams.get("pricemax") != null) {
+        //in searchparams the method .get takes the value of the relevant parameter of the URL
         pmax.value = url.searchParams.get("pricemax");
       }
       if (url.searchParams.get("pricemin") != null) {
@@ -403,7 +430,7 @@
     pmax.oninput = function() {
       pmin.max = this.value;
     };
-
+    //from here onwards thelink or the url is made and redirets to the relevant link
     function setGetParams() {
       let url = "products.php?";
       if (pmax.value != "") {
@@ -433,6 +460,7 @@
         url = url + "&shipping=true";
       }
       url = url + "&search=" + search.value;
+      //the final 
       window.location.href = url;
     }
   </script>

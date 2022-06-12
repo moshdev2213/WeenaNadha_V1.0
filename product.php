@@ -121,6 +121,7 @@
             <div class="img-select">
               <?php
               $id = 1;
+              //this image categor is related to the small image boxes
               foreach ($img_array as $img) {
               ?>
                 <div class="img-item">
@@ -217,7 +218,9 @@
               </div>
             </div>
           <?php }
-        } else { ?>
+        } 
+        //executes the else block
+        else { ?>  
           <div class="text-center">
             <div class="texty">
               <h3>No Reviews Yet</h3>
@@ -235,7 +238,7 @@
             }
           </style>
         <?php } ?>
-
+        <!-- end of the else block -->
 
       </div>
   <?php
