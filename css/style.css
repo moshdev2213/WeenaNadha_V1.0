@@ -347,7 +347,10 @@ h1.heading {
   flex: 1 1 30rem;
   position: relative;
 }
-
+/* .box:hover{
+  transform: scale(2);
+  transition: 0.5s;
+} */
 .popular .box-container .box img {
   height: 25rem;
   object-fit: contain;

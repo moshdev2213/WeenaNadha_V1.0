@@ -220,9 +220,9 @@
               <div class="product-bottom-details">
                 <div class="product-price"><small>Rs<?php echo $product['mrp'] ?></small>Rs<?php echo $product['price'] ?></div>
                 <div class="product-links">
-                  <button class="btnbuy">BUY NOW</button>
-                  <a href=""><i class="fa fa-heart"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="Cart.html"><button class="btnbuy">BUY NOW</button></a> 
+                  <a href="#"><i class="fa fa-heart"></i></a>
+                  <a href="My Shopping Cart.html"><i class="fa fa-shopping-cart"></i></a>
                 </div>
               </div>
             </div>
