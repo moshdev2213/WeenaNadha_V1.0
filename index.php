@@ -127,9 +127,9 @@
 
       <div class="box-container">
         <div class="box">
-          <img src="IMG/iimg/1.jpg" alt="Saxophone" />
+          <a href="product.php?id=20"><img src="IMG/iimg/1.jpg" alt="Saxophone" /></a> 
           
-          <h3>Saxophone</h3>
+          <h3>Clary C-90</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -138,16 +138,18 @@
             <i class="fas fa-star"></i>
           </div>
 
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 
         <div class="box">
-          <a href="product.php?id=1"> <img src="IMG/iimg/3.jpg" alt="Trumpet" /></a>
+          <a href="product.php?id=4"> <img src="IMG/keyboard/4/1.jpg" alt="Trumpet" /></a>
           
-          <h3>Trumpet</h3>
+          <h3>Red Magic</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -155,16 +157,18 @@
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 
         <div class="box">
-          <img src="IMG/iimg/4.jpg" alt="" />
+        <a href="product.php?id=21"><img src="IMG/saxaphone/2/4.jpg" alt="Saxophone" /></a> 
           
-          <h3>Flute #3</h3>
+          <h3>CLARY C-90_G</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -172,16 +176,18 @@
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 
         <div class="box">
-          <img src="IMG/2.jpg" alt="Drum" />
+        <a href="product.php?id=24"><img src="IMG/tabla/1/4.jpg" alt="Saxophone" /></a> 
          
-          <h3>Drum</h3>
+          <h3>Drum BI</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -189,10 +195,12 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 		</div>
 	  </section>
@@ -202,9 +210,9 @@
   
 		<div class="box-container">
 		  <div class="box">
-			<img src="IMG/iimg/ess.jpg" alt="Sithar" />
+      <a href="product.php?id=16"><img src="IMG/piano/4/2.webp" alt="Saxophone" /></a> 
 			
-			<h3>Sithar</h3>
+			<h3>Tabla</h3>
 			<div class="stars">
 			  <i class="fas fa-star"></i>
 			  <i class="fas fa-star"></i>
@@ -213,16 +221,18 @@
 			  <i class="far fa-star"></i>
 			</div>
   
-			<a href="#" class="btn2">BUY</a>
-			<button class="btn3">
-			  CART <i class="fa fa-shopping-cart"></i>
-			</button>
+      <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
 		  </div>
   
 		  <div class="box">
-			<img src="IMG/iimg/tub.jpg" alt="Tubla" />
+      <a href="product.php?id=11"><img src="IMG/ELECTRIC_GUITAR/3/4.jpg" alt="Saxophone" /></a> 
 			
-			<h3>Indian Thabla</h3>
+			<h3>Jazz Hiphop</h3>
 			<div class="stars">
 			  <i class="fas fa-star"></i>
 			  <i class="fas fa-star"></i>
@@ -230,16 +240,18 @@
 			  <i class="fas fa-star"></i>
 			  <i class="far fa-star"></i>
 			</div>
-			<a href="#" class="btn2">BUY</a>
-			<button class="btn3">
-			 CART <i class="fa fa-shopping-cart"></i>
-			</button>
+      <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
 		  </div>
   
 		  <div class="box">
-			<img src="IMG/iimg/sab.jpg" alt="Sabian " />
+      <a href="product.php?id=23"><img src="IMG/saxaphone/4/42.jpg" alt="Saxophone" /></a> 
 			
-			<h3>Sabian SBR1402</h3>
+			<h3>Casio C-11A</h3>
 			<div class="stars">
 			  <i class="fas fa-star"></i>
 			  <i class="fas fa-star"></i>
@@ -248,15 +260,18 @@
 			  <i class="far fa-star"></i>
 			</div>
 			<a href="#" class="btn2">BUY</a>
-			<button class="btn3">
-			  CART <i class="fa fa-shopping-cart"></i>
-			</button>
+      <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
 		  </div>
   
 		  <div class="box">
-			<img src="IMG/iimg/keyb.jpg" alt="keybord" />
+      <a href="product.php?id=1"><img src="IMG/Keyboard/1/2.jpg" alt="Saxophone" /></a> 
 			
-			<h3>Yamaha Keybord</h3>
+			<h3>RockJam 61</h3>
 			<div class="stars">
 			  <i class="fas fa-star"></i>
 			  <i class="fas fa-star"></i>
@@ -264,10 +279,12 @@
 			  <i class="fas fa-star"></i>
 			  <i class="fas fa-star"></i>
 			</div>
-			<a href="#" class="btn2">BUY</a>
-			<button class="btn3">
-			  CART <i class="fa fa-shopping-cart"></i>
-			</button>
+      <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
 		  </div>
 		  </div>
 		</section>
@@ -276,9 +293,9 @@
 
       <div class="box-container">
         <div class="box">
-          <img src="IMG/iimg/gut.png" alt="guitar" />
+        <a href="product.php?id=8"><img src="IMG/classical/2/0.webp" alt="Saxophone" /></a> 
           
-          <h3>guitar</h3>
+          <h3>Yamaha - dark</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -287,16 +304,18 @@
             <i class="far fa-star"></i>
           </div>
 
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 
         <div class="box">
-          <img src="IMG/piano/1/4.jpg" alt="" />
+        <a href="product.php?id=13"><img src="IMG/ELECTRIC_GUITAR/5/3.jpg" alt="Saxophone" /></a> 
           
-          <h3>Piano</h3>
+          <h3>Casio Travellar T-89</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -304,16 +323,18 @@
             <i class="fas fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 
         <div class="box">
-          <img src="IMG/flute/1/jfl710.jpg" alt="" />
+        <a href="product.php?id=18"><img src="IMG/piano/3/3.jpg" alt="Saxophone" /></a> 
           
-          <h3>Flute</h3>
+          <h3>Piano Royal W</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -321,16 +342,18 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
 
         <div class="box">
-          <img src="IMG/Drum/2/5.jpg" alt="" />
+        <a href="product.php?id=25"><img src="IMG/tabla/2/2.jpg" alt="Saxophone" /></a> 
          
-          <h3>Drum (red)</h3>
+          <h3>Drum BI large</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -338,15 +361,17 @@
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
         <div class="box">
-          <img src="IMG/Keyboard/3/2.jpg" alt="" />
+        <a href="product.php?id=3"><img src="IMG/Keyboard/3/1.jpg" alt="Saxophone" /></a> 
           
-          <h3>Mini Keyboard</h3>
+          <h3>Zur Musik</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -354,13 +379,15 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
         <div class="box">
-          <img src="IMG/ELECTRIC_GUITAR/3/3.jpg" alt="" />
+        <a href="product.php?id=14"><img src="IMG/ELECTRIC_GUITAR/6/4.jpg" alt="Saxophone" /></a> 
          
           <h3>Electronic Guitar</h3>
           <div class="stars">
@@ -370,15 +397,17 @@
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
         <div class="box">
-          <img src="IMG/iimg/5.jpg" alt="" />
+        <a href="product.php?id=22"><img src="IMG/saxaphone/3/2.jpg" alt="Saxophone" /></a> 
           
-          <h3>Flute #2</h3>
+          <h3>Clary C-19 Pro</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -386,15 +415,17 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-           CART <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
         </div>
         <div class="box">
-          <img src="IMG/classical/2/4.jpg" alt="" />
+        <a href="product.php?id=15"><img src="IMG/flute/1/jfl710.jpg" alt="Saxophone" /></a> 
          
-          <h3>Classical Guitar</h3>
+          <h3>F1 Flute</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -402,13 +433,16 @@
             <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
-          <a href="#" class="btn2">BUY</a>
-          <button class="btn3">
-            CART  <i class="fa fa-shopping-cart"></i>
-          </button>
+          <a href="Cart.html" class="btn2">BUY</a>
+          <a href="My Shopping Cart.html">
+            <button class="btn3">
+              CART  <i class="fa fa-shopping-cart"></i>
+            </button>
+          </a>
+
         </div>
 
-        <div class="box">
+        <!-- <div class="box">
           <img src="IMG/Drum/2/2.jpg" alt="" />
           
           <h3>Kid's Drum set</h3>
@@ -423,9 +457,9 @@
           <button class="btn3">
             CART  <i class="fa fa-shopping-cart"></i>
           </button>
-        </div>
+        </div> -->
 
-        <div class="box">
+        <!-- <div class="box">
           <img src="IMG/Keyboard/2/5.jpg" alt="" />
           
           <h3>Keyboard Full set</h3>
@@ -440,7 +474,7 @@
           <button class="btn3">
             CART  <i class="fa fa-shopping-cart"></i>
           </button>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -465,9 +499,9 @@
             <!--for the underline -->
             <ul>
               <a href="#"><li>Home</li></a>
-              <a href="#"><li>Search</li></a>
-              <a href="#"><li>Contact</li></a>
-              <a href="#"><li>About</li></a>
+              <a href="products.php"><li>Shop Now</li></a>
+              <a href="index.html"><li>Education</li></a>
+              <a href="contact.html"><li>Contact us</li></a>
             </ul>
           </div>
 

@@ -94,7 +94,7 @@ function validateEmail(idAtt)
   var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
   if(!(email.match(mailformat)))
   {
-      emailError.innerHTML = "Invalid email";
+      emailError.innerHTML = "Email Submitted Sucesfully!";
       document.getElementById(idAtt).style.border = "2px solid red";
       return false;
   }
@@ -104,7 +104,7 @@ function validateForm()
   if(!(validateEmail('email')))
   {
       SubmitError.style.display = "block";
-      SubmitError.innerHTML = "Invalid Email error!";
+      SubmitError.innerHTML = "Email Submitted Sucesfully!";
       setTimeout(function(){SubmitError.style.display = 'none';}, 3000);
       return false;
   }

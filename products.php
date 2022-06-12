@@ -256,18 +256,10 @@
             <div class="border1"></div>
             <!--for the underline -->
             <ul>
-              <a href="#">
-                <li>Home</li>
-              </a>
-              <a href="#">
-                <li>Search</li>
-              </a>
-              <a href="#">
-                <li>Contact</li>
-              </a>
-              <a href="#">
-                <li>About</li>
-              </a>
+            <a href="index.php"><li>Home</li></a>
+              <a href="products.php"><li>Shop Now</li></a>
+              <a href="index.html"><li>Education</li></a>
+              <a href="contact.html"><li>Contact us</li></a>
             </ul>
           </div>
 
