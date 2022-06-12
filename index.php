@@ -145,7 +145,7 @@
         </div>
 
         <div class="box">
-          <img src="IMG/iimg/3.jpg" alt="Trumpet" />
+          <a href="product.php?id=1"> <img src="IMG/iimg/3.jpg" alt="Trumpet" /></a>
           
           <h3>Trumpet</h3>
           <div class="stars">

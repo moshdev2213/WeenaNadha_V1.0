@@ -197,9 +197,11 @@
         $products = database::search($query);
         $product_count = $products->num_rows;
 
+
         while ($product = $products->fetch_assoc()) {
           //this fetches the image from the database with compraing to the product id   
           $img = database::search("SELECT * FROM `image` WHERE `product_id` = '{$product['product_ID']}' ")->fetch_assoc()['path'];
+
           //this fetch the category specification from the database and query enables here
           $category = database::search("SELECT * FROM `category` WHERE `category_ID` = '" . $product['category_ID'] . "' ");
           $category = $category->fetch_assoc()['name'];
@@ -220,7 +222,7 @@
               <div class="product-bottom-details">
                 <div class="product-price"><small>Rs<?php echo $product['mrp'] ?></small>Rs<?php echo $product['price'] ?></div>
                 <div class="product-links">
-                  <a href="Cart.html"><button class="btnbuy">BUY NOW</button></a> 
+                  <a href="Cart.html"><button class="btnbuy">BUY NOW</button></a>
                   <a href="#"><i class="fa fa-heart"></i></a>
                   <a href="My Shopping Cart.html"><i class="fa fa-shopping-cart"></i></a>
                 </div>
