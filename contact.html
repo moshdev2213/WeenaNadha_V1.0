@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/contactstyle.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <div class="topic">Address</div>
+          <div class="text-one">WeenaNada LTD
+            3rd Floor, No.340/3/1,
+            Basil Building,
+            Galle Road, Kollupitiya,
+            Sri Lanka.</div>
+          
+        </div>
+        <div class="phone details">
+          <div class="topic">Phone</div>
+          <div class="text-one">011 336669</div>
+          <div class="text-two">+9477 885999</div>
+        </div>
+        <div class="email details">
+          <div class="topic">Email</div>
+          <div class="text-one">contact.weenanada@gmail.lk</div>
+          <div class="text-two">official.weenanada@gmail.lk</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Get In Touch</div>
+      <form method="post" action="http://localhost:8081/weenanada/php/inquiryProcess.php">
+        <span id="SendError"></span>
+        <div class="input-box">
+          <input type="text" placeholder="First Name" name="firstname" id="fname" onkeyup="validateContactName('fname')">
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Last Name" name="lastname" id="lname" onkeyup="validateContactName('lname')">
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Enter your phone No" name="phone_no" id="phone" onkeyup="validateContactPhone('phone')">
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email" name="email" id="email" onkeyup="validateContactEmail('email')"> 
+        </div>
+        <div class="input-box message-box">
+          <textarea placeholder="Type message here" cols="30" rows="10" name="description" id="desc"  onkeyup="validateContactDesc('desc')"></textarea>
+        </div>
+        <div class="button">
+          <button onclick="return validateInquiry()">Send Now</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+  <script type="text/javaScript" src="js/validate.js"></script>
+</body>
+</html>

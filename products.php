@@ -24,10 +24,10 @@
   <!--THE MAIN TYPE OF NAV BAR BEGINS-->
   <nav class="prinav">
     <div class="left">
-      <a href="#">HOME</a>
-      <a href="#">PRODUCTS</a>
-      <a href="#">EDUCATION</a>
-      <a href="#">CONTACT US</a>
+    <a href="index.php">HOME</a>
+      <!-- <a href="products.php">PRODUCTS</a> -->
+      <a href="index.html">EDUCATION</a>
+      <a href="contact.html">CONTACT US</a>
     </div>
     <div class="right">
       <a href=""><i class="fa fa-phone" style="position: absolute; margin-right: 25px; font-size: 14px" aria-hidden="true"></i></a><a href="#"> 011454525687</a>

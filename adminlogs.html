@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Logs/Registers</title>
+    <link rel="stylesheet" href="css/astyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="sign-up-container">
+                <h1>Create Admin Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><img src="icons/facebook-f-brands.svg" alt="facebook"></a>
+                    <a href="#" class="social"><img src="icons/google-brands.svg" alt="google"></a>
+                </div>
+                <h6>or use your email for registration</h6>
+
+            <form method="post" action="php/process.php" name="signUp">
+
+                 <div class="inputs">
+                 <span id="submitError"></span>
+                 <input type="text" placeholder="Name" name="name" id="name" onkeyup="validateName()" autocomplete="off">
+                 <span id="name-error"></span>
+                 </div>
+                
+                 <div class="inputs">
+                 <input type="email" placeholder="Email ID" name="email" id="email" onkeyup="validateEmail('email','email-error')" autocomplete="off">
+                 <span id="email-error"></span>
+                 </div>
+
+                 <div class="inputs">
+                 <input type="text" placeholder="Phone No" name="phone" id="phone" onkeyup="validatePhone('phone','phone-error')" autocomplete="off">
+                 <span id="phone-error"></span>
+                 </div>
+
+                 <div class="inputs">
+                 <input type="password" placeholder="Password" name="password" id="pass" onkeyup="validatePass('pass','password-error'),enablevisibility(),validateRepass()" autocomplete="off">
+                 <span id="password-error"></span>
+                 <h6 id="eye"></h6>
+                 </div>
+
+                 <div class="inputs">
+                 <input type="password" placeholder="Re-Password" id="re-pass" onkeyup="validateRepass()" autocomplete="off">
+                 <span id="re-password-error"></span>
+                 </div>
+
+                 <input type="checkbox" id="check" required><i id="agree"><a href="#">I accept all the terms & conditions</a></i>
+                 <button onclick="return validateForm()">sign-up</button>
+                 
+             </form>
+        </div>
+        <div class="sign-in-container">
+            <form action="php/login.php" method="post" name="signIn">
+                <h1>Sign In</h1>
+                <div class="social-container">
+                   <a href="#" class="social"><img src="icons/facebook-f-brands.svg" alt="facebook"></a>
+                   <a href="#" class="social"><img src="icons/google-brands.svg" alt="google"></a>
+                </div>
+                <h6>or use your account</h6><br>
+                
+                <div class="inputs">
+                <span id="login-submitError"></span>
+                <input type="email" placeholder="Email ID" name="email" id="log-email" onkeyup="validateEmail('log-email','log-email-error')">
+                <span id="log-email-error"></span>
+                <input type="password" placeholder="Password" name="password" id="log-pass" onkeyup="validatePass('log-pass','log-password-error')">
+                <span id="log-password-error"></span>
+                <br><a href="forgot.html">Forgot password?</a>
+                </div>
+
+                <button onclick="return validateLogin()">sign-in</button>
+            </form>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <center><img src="images/bg1.png" alt="" id="bgimage"></center>
+                <div class="slide-panel slide-left">
+                    <h1 style="font-family: 'Bangers', cursive;">WeenaNada</h1><br>
+                    <h1>Welcome To Admin Dashboard</h1>
+                    <p>If you are already an Admin of WeenaNada then this is the place, you can manage or configure the system</p>
+                    <button class="press" id="sign-in">Sign In</button>
+                </div>
+                <div class="slide-panel slide-right">
+                    <h1 style="font-family: 'Bangers', cursive;">WeenaNada</h1><br>
+                    <h1>Become As an Admin</h1>
+                    <p>If you become a Admin of WeenaNada you will manage system level administrative tasks</p>
+                    <button class="press" id="sign-up">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javaScript" src="js/validate.js"></script>
+    <script>
+        /* The js codes helps to swap contents on the form while sliding animation*/
+        const signUpButton = document.getElementById("sign-up");
+        const signInButton = document.getElementById("sign-in");
+        const Container = document.getElementById("container"); 
+
+        signUpButton.addEventListener('click',()=>{
+            container.classList.add("slide-right-active");
+        })
+
+        signInButton.addEventListener('click',()=>{
+            container.classList.remove("slide-right-active");
+        })
+
+        /*This function helps to view password in text format and viseversa*/
+        function visibility()
+        {
+            var pass = document.getElementById("pass");
+            var view = document.getElementById("hide1");
+            var hide = document.getElementById("hide2");
+
+            if(pass.type === 'password')
+            {
+                pass.type = "text";
+                view.style.display = "inline";
+                hide.style.display = "none";
+
+            }
+            else
+            {
+                pass.type = "password";
+                view.style.display = "none";
+                hide.style.display = "inline";
+            }
+        }
+
+        /*This function enables the visiblilty eye when user clicks on password field*/
+        function enablevisibility()
+        {
+
+            var view = document.getElementById("eye");
+            view.innerHTML = 'visibility <i id="hide1" class="fa fa-eye" onclick="visibility()"></i><i id="hide2" class="fa fa-eye-slash" onclick="visibility()"></i>';
+            return false; 
+
+        }
+
+    </script>
+
+</body>
+</html>

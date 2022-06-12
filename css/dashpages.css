@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monstserrat',sans-serif;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    border-bottom: 2px solid #999;
+}
+
+.orderstable .recent-payments{
+    flex: 5;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2); 
+    margin: 0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderstable{
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.heading h2{
+    color: rgb(6, 5, 13);
+}
+
+table{
+    padding: 10px;
+    background: linear-gradient(to right,#FF416C,#FF4B2B);
+}
+
+th{
+    text-align: center;
+    padding: 5px;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    background: black;
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+tr:hover{
+    background-color: rgb(6, 5, 13);
+    border: 2px solid white;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input,select option, textarea, .cus-select select{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 12px 15px;
+    text-decoration: none;
+    width: 100%
+}
+
+.save{
+    background: linear-gradient(to right,#FF416C,#FF4B2B);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    width: 100%;
+    height: 40px;
+}
+
+.save:hover{
+    color: #f05462;
+    background: white;
+    border: 2px solid #f05462;
+}

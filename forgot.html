@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Logs/Registers</title>
+    <link rel="stylesheet" href="css/astyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .sign-in-container #Pass-ResetError{
+            display: none;
+            align-items: right;
+            color: red;
+            font-weight: bold;
+            font-style: oblique;
+            height: 20px;
+            padding-left: 10px;
+            background-color: rgba(228, 225, 217, 0.944);
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="sign-in-container">
+            <form action="php/reset.php" method="post" name="reSet">
+                <h1>Recover Your Account</h1>
+                <h6>if you could not please contact us</h6><br>
+                
+                <div class="inputs">
+                <span id="Pass-ResetError"></span>
+                <input type="Email" placeholder="Email ID" name="email" id="email" onkeyup="validateEmail('email','email-error')">
+                <span id="email-error"></span>
+                <input type="password" placeholder="Last 3 digit of your password" name="ord" id="last-pass" onkeyup="validateLength('last-pass','length-error')">
+                <span id="length-error"></span>
+                <input type="password" placeholder="New Password" name="password" id="reset-pass" onkeyup="validatePass('reset-pass','new-pass-error'),validateRepass('reset-repass','re-password-error')">
+                <span id="new-pass-error"></span>
+                <input type="password" placeholder="Re-Password" name="password" id="reset-repass" onkeyup="validateRepass('reset-repass','re-password-error')">
+                <span id="re-password-error"></span>
+                </div>
+
+                <button onclick="return validateReset()">Reset</button>
+            </form>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <center><img src="images/bg1.png" alt="" id="bgimage"></center>
+                <div class="slide-panel slide-right">
+                    <h1 style="font-family: 'Bangers', cursive;">WeenaNada</h1><br>
+                    <h1>RECOVER YOUR ACCOUNT</h1>
+                    <p>We value our customers, if recovering is not possible please contact us </p>
+                    <a href="contact.html"><button class="press" id="sign-up">Contact Us</button></a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /*This function helps to view password in text format and viseversa*/
+        function visibility()
+        {
+            var pass = document.getElementById("pass");
+            var view = document.getElementById("hide1");
+            var hide = document.getElementById("hide2");
+
+            if(pass.type === 'password')
+            {
+                pass.type = "text";
+                view.style.display = "inline";
+                hide.style.display = "none";
+
+            }
+            else
+            {
+                pass.type = "password";
+                view.style.display = "none";
+                hide.style.display = "inline";
+            }
+        }
+
+        /*This function enables the visiblilty eye when user clicks on password field*/
+        function enablevisibility()
+        {
+
+            var view = document.getElementById("eye");
+            view.innerHTML = 'visibility <i id="hide1" class="fa fa-eye" onclick="visibility()"></i><i id="hide2" class="fa fa-eye-slash" onclick="visibility()"></i>';
+            return false; 
+
+        }
+
+        function validateEmail(idAtt,spanAtt)
+        {
+            var emailError = document.getElementById(spanAtt);
+            var email = document.getElementById(idAtt).value;
+            if(email.length == 0)
+            {
+                emailError.innerHTML = "Email cannot be blank";
+                document.getElementById(idAtt).style.border = "2px solid red";
+                return false;
+            }
+
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(!(email.match(mailformat)))
+            {
+                emailError.innerHTML = "Invalid email";
+                document.getElementById(idAtt).style.border = "2px solid red";
+                return false;
+            }
+
+            emailError.innerHTML = "";
+            document.getElementById(idAtt).style.border = "2px solid green";
+            return true;
+        }
+
+        function validateLength(idAtt,spanAtt)
+        {
+            var lengthError = document.getElementById(spanAtt);
+            var lastpass = document.getElementById(idAtt).value;
+            if(lastpass.length == 0 || lastpass.length > 3)
+            {
+            lengthError.innerHTML = "Last 3 digits only";
+            document.getElementById(idAtt).style.border = "2px solid red";
+            return false;
+            }
+            lengthError.innerHTML = "";
+            document.getElementById(idAtt).style.border = "2px solid green";
+            return true;
+        }
+
+        function validatePass(idAtt,spanAtt)
+        {
+            var passError = document.getElementById(spanAtt);
+            var pass = document.getElementById(idAtt).value;
+            if(pass == null || pass.length < 6 || pass.length > 12)
+            {
+            passError.innerHTML = "Password must be 6-12 characters";
+            document.getElementById(idAtt).style.border = "2px solid red";
+            return false;
+            }
+
+            var passFormat = /^((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{6,12})+$/;
+            if(!(pass.match(passFormat)))
+            {
+            passError.innerHTML = "Must contain caps(A-Z),smalls(a-z),numbers(0-9) and symbols(!@#$%^&*)";
+            document.getElementById(idAtt).style.border = "2px solid red";
+            return false;
+            }
+
+            passError.innerHTML = "";
+            document.getElementById(idAtt).style.border = "2px solid green";
+            return true;
+        }
+
+        function validateRepass(idAtt,spanAtt)
+        {
+            var repassError = document.getElementById(spanAtt);
+            var pass = document.getElementById("reset-pass").value;
+            var rePass = document.getElementById(idAtt).value;
+            
+            if(!(rePass === pass && rePass.length === pass.length && rePass.length >= 6 && rePass.length <= 12))
+            {
+                repassError.innerHTML = "Password is incorrect";
+                document.getElementById(idAtt).style.border = "2px solid red";
+                return false;
+            }
+
+            repassError.innerHTML = "";
+            document.getElementById(idAtt).style.border = "2px solid green";
+            return true;
+        }
+
+        function validateReset()
+        {
+            var resetError = document.getElementById("Pass-ResetError");
+
+            if(!validateEmail('email','email-error') || !validateLength('last-pass','length-error') || !validatePass('reset-pass','new-pass-error') || !validateRepass('reset-repass','re-password-error'))
+            {
+                resetError.style.display = "block";
+                resetError.innerHTML = "Please fix Reset-error!";
+                setTimeout(function(){resetError.style.display = 'none';}, 3000);
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
