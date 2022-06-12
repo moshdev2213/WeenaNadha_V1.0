@@ -24,23 +24,23 @@
   <!--THE MAIN TYPE OF NAV BAR BEGINS-->
   <nav class="prinav">
     <div class="left">
-    <a href="index.php">HOME</a>
+      <a href="index.php">HOME</a>
       <!-- <a href="products.php">PRODUCTS</a> -->
       <a href="index.html">EDUCATION</a>
       <a href="contact.html">CONTACT US</a>
     </div>
     <div class="right">
       <a href=""><i class="fa fa-phone" style="position: absolute; margin-right: 25px; font-size: 14px" aria-hidden="true"></i></a><a href="#"> 011454525687</a>
-      <a href="#">PRODUCTS</a>
-      <a href="#">SIGN-UP</a>
-      <a href="#">SIGN-IN</a>
+      <!-- <a href="#">PRODUCTS</a> -->
+      <a href="adminlogs.html" target="_blank">SIGN-IN/UP</a>
+
     </div>
   </nav>
 
   <!--THE SECOND TYPE OF NAV BAR BEGINS-->
   <div class="secnav">
     <div class="image">
-      <img src="IMG/logo.png" alt="logo" />
+      <a href="index.php"> <img src="IMG/logo.png" alt="logo" /></a>
     </div>
     <div class="details">
       <div class="hamburger-menu">
@@ -50,11 +50,11 @@
         </label>
 
         <ul class="menu__box">
-          <li><a class="menu__item" href="#">HOME</a></li>
-          <li><a class="menu__item" href="#">SIGN-UP</a></li>
-          <li><a class="menu__item" href="#">SIGN-IN</a></li>
-          <li><a class="menu__item" href="#">EDUCATION</a></li>
-          <li><a class="menu__item" href="#">PRODUCTS</a></li>
+          <li><a class="menu__item" href="index.php">HOME</a></li>
+          <li><a class="menu__item" href="adminlogs.html">SIGN-UP</a></li>
+          <li><a class="menu__item" href="adminlogs.html">SIGN-IN</a></li>
+          <li><a class="menu__item" href="index.html">EDUCATION</a></li>
+          <li><a class="menu__item" href="products.php">PRODUCTS</a></li>
         </ul>
       </div>
       <a class="secnav_item" href="#">STRINGS</a>

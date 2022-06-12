@@ -41,16 +41,16 @@
             aria-hidden="true"
           ></i></a
         ><a href="#"> 011454525687</a>
-        <a href="#">PRODUCTS</a>
-        <a href="#">SIGN-UP</a>
-        <a href="#">SIGN-IN</a>
+        <!-- <a href="#">PRODUCTS</a> -->
+        <!-- <a href="#">SIGN-UP</a> -->
+        <a href="adminlogs.html" target="_blank">SIGN-IN/UP</a>
       </div>
     </nav>
 
     <!--  NAV BAR BEGINS-->
     <div class="secnav">
       <div class="image">
-        <img src="IMG/logo.png" alt="logo" />
+        <a href="index.php"> <img src="IMG/logo.png" alt="logo" /></a>
       </div>
       <div class="details">
         <div class="hamburger-menu">
